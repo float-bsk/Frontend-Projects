@@ -7,3 +7,5 @@ This project is a single page cv built using html to demonstrate:
 - Opengraph tags
 
 To view the project, open index.html in the browser.
+
+<https://roadmap.sh/projects/single-page-cv>
