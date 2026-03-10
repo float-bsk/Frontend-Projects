@@ -1,0 +1,136 @@
+.sectionrow{
+    display:flex;
+    flex-grow: 1;
+    border: 1px solid gray;
+    border-collapse: collapse;
+    justify-content: space-evenly;
+}
+
+.customul{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    font-weight: 600;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+nav{
+    display: flex;
+    flex-grow: 1;
+    height: 4rem;
+    justify-content:space-between ;
+    align-items: center;
+    padding:1rem;
+    width: 100%;
+}
+
+.avatar{
+    display: inline-flex;
+    gap:1rem;
+    justify-content: center;
+    padding:1rem;
+    background-color: lightsteelblue;
+}
+
+header{
+    border: 1px solid gray;
+    border-collapse: collapse;
+    padding:1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexcol {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top:1rem;
+    padding-bottom:1rem;
+    gap:1rem;
+    
+}
+
+.addborder{
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+.homesection{
+    min-width:30% ;
+    padding: 1rem;
+}
+
+hr{
+    display: block;
+    width: 100%;
+    color: black;
+}
+
+a{
+    text-decoration: none;
+    text-transform: none;
+}
+
+.reviewcard{
+    gap:2rem;
+    padding:2rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    max-width: 250px;    
+}
+
+.reviewcard-container{
+    display: flex;
+    gap:2rem;
+
+}
+.reviewsection{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 50dvh;
+    padding:2rem;
+    border-collapse: collapse;
+    border: 1px solid gray;
+}
+
+.lightfont{
+    color:lightslategray
+}
+
+.copyright{
+    margin-left:auto;
+    margin-right:auto;
+    width: fit-content;
+    }
+
+footer{
+    min-height: 15rem;
+    align-content: end;
+    width: 100%;  
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: fex-start;
+    align-items: flex-start;
+    padding:2rem;
+    width: fit-content;
+    border-collapse: collapse;
+    border: 1px solid gray;
+    margin: auto;
+    max-width: 300px;
+}
+
+input{
+    height: 2rem;
+    min-width: 100%;
+}
+
+.centertext{
+    text-align: center;
+}
+
