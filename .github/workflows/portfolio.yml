@@ -4,9 +4,7 @@ on:
   push:
     branches:
       - main
-    paths:
-      - '03-personal-portfolio/**'
-
+   
 jobs:
   deploy:
     runs-on: ubuntu-latest
