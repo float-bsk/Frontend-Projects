@@ -16,3 +16,7 @@ Goal
 -[x] Typography
 -[x] Design Tokens
 -[x] Dark / Light Theme
+
+## Sample portfolio Website hosted on github pages
+
+<https://float-bsk.github.io/Frontend-Projects/>
