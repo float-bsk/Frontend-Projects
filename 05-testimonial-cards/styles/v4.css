@@ -1,0 +1,134 @@
+@import "./styles.css";
+
+
+.testimonial-card-v4 {
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    width: 400px;
+    overflow-x: hidden;
+    max-width: 768px;
+    width: 100%;
+    border-radius: var(--space-2);
+    border: 1px solid var(--border-color);
+    padding: var(--space-3);
+}
+
+.testimonial-text-content-v4{
+    max-width: 600px;
+    padding:1rem;
+    text-align: center;
+    margin:auto;
+    font-size:1.2rem;
+}
+
+.carousal .images-list {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: var(--space-2);
+    width: fit-content;
+    gap: 1rem;
+    margin: auto;
+}
+
+
+.carousal .images-list li {
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.carousal .images-list li p {
+    font-size: 1.5rem;
+}
+
+.carousal .images-list li:nth-child(odd) img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+    filter: brightness(1.2) contrast(0.5) saturate(0.6);
+}
+
+
+.prev {
+    position: absolute;
+    top: 30%;
+    left: -30px;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.prev::after{
+    content:"";
+    display:inline-block;
+    width: 20px;
+    height:20px;
+    border-right:2px solid var(--text-color);
+    border-top:2px solid var(--text-color);
+    transform: rotate(-135deg);
+    margin:10px;
+}
+
+.next {
+   position: absolute;
+    top: 30%;
+    right: -30px;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.next::after{
+    content:"";
+    display:inline-block;
+    width: 20px;
+    height:20px;
+    border-right:2px solid var(--text-color);
+    border-top:2px solid var(--text-color);
+    transform: rotate(45deg);
+    margin:10px;
+}
+
+@media(max-width:425px){
+    .testimonial-card-v4 {
+        padding:0;
+        gap:0.5rem;
+    }
+
+    .carousal .images-list{
+        padding:var(--space-2);
+    }
+    .carousal .images-list li{
+        height:100px;
+    }
+
+    .carousal .images-list li:nth-child(even) img{
+        width:70px;
+        height:70px;
+    }
+
+   .carousal .images-list li:nth-child(odd) img{
+    width:45px;
+    height:45px;
+   }
+
+   .carousal .images-list{
+    gap:0.5rem;
+   }
+
+   .prev{
+    left:-20px;
+   }
+
+   .next{
+    right:-20px;
+   }
+
+}

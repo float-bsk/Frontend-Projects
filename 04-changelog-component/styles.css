@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-}
 
 :root{
   --color-white:#fff;
@@ -17,6 +12,14 @@
   --color-primary-dark:#003f87;
   --color-secondary-regular:#ffa600f5;
   --color-secondary-light:#ffb937;
+}
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-variation-settings: "opsz" 16;
 }
 
 [data-theme="dark"]{
@@ -49,6 +52,8 @@ body{
     padding: 2rem 0.5rem;
     background-color: var(--background-color);
     color:var(--text-color);
+    font-size: 1rem;
+    
 }
 
 h1,h3{
