@@ -3,7 +3,7 @@ applyTheme(storedTheme);
 
 function applyTheme(theme){
     document.documentElement.setAttribute("data-theme", theme);
-        localStorage.setItem("theme", theme);
+    localStorage.setItem("theme", theme);
 }
 
 function toggleTheme(){

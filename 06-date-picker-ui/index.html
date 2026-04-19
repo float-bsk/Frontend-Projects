@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>Date Picker UI using HTML/CSS</title>
+</head>
+<body>
+  <nav class="navigation-menu">
+    <button id="theme-toggle" class="btn  btn-icon">
+      <svg class="svg-icon sun" viewBox="-2 -1.5 24 24" xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="xMinYMin" data-iconid="360808" data-svgname="Sun f">
+        <path
+          d="M10 15.565a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-15a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0v-2a1 1 0 0 1 1-1zm0 16a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0v-2a1 1 0 0 1 1-1zm-9-7h2a1 1 0 1 1 0 2H1a1 1 0 0 1 0-2zm16 0h2a1 1 0 0 1 0 2h-2a1 1 0 0 1 0-2zm.071-6.071a1 1 0 0 1 0 1.414l-1.414 1.414a1 1 0 1 1-1.414-1.414l1.414-1.414a1 1 0 0 1 1.414 0zM5.757 14.808a1 1 0 0 1 0 1.414l-1.414 1.414a1 1 0 1 1-1.414-1.414l1.414-1.414a1 1 0 0 1 1.414 0zM4.343 3.494l1.414 1.414a1 1 0 0 1-1.414 1.414L2.93 4.908a1 1 0 0 1 1.414-1.414zm11.314 11.314l1.414 1.414a1 1 0 0 1-1.414 1.414l-1.414-1.414a1 1 0 1 1 1.414-1.414z">
+        </path>
+      </svg>
+
+      <!-- MOON SVG -->
+      <svg class="svg-icon moon" viewBox="-4 -2 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin"
+        data-iconid="360594" data-svgname="Moon f">
+        <path
+          d="M12.253.335A10.086 10.086 0 0 0 8.768 8c0 4.632 3.068 8.528 7.232 9.665A9.555 9.555 0 0 1 9.742 20C4.362 20 0 15.523 0 10S4.362 0 9.742 0c.868 0 1.71.117 2.511.335z">
+        </path>
+      </svg>
+    </button>
+  </nav>
+  <main>
+    <section class="date-picker-wrapper">
+      <section class="controller">
+        <input type="text" name="dateinput" id="dateinput" class="date-input">
+        <button class="btn btn-icon">
+          <svg class="svg-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve" data-iconid="339000"
+            data-svgname="Calendar event">
+            <path id="calendar--event_1_" d="M30,31.36H2c-0.199,0-0.36-0.161-0.36-0.36V4c0-0.199,0.161-0.36,0.36-0.36h4v0.72H2.36v26.28
+	h27.28V4.36H26V3.64h4c0.199,0,0.36,0.161,0.36,0.36v27C30.36,31.199,30.199,31.36,30,31.36z M26,25.36h-8
+	c-0.199,0-0.36-0.161-0.36-0.36v-4c0-0.199,0.161-0.36,0.36-0.36h8c0.199,0,0.36,0.161,0.36,0.36v4
+	C26.36,25.199,26.199,25.36,26,25.36z M18.36,24.64h7.279v-3.28H18.36V24.64z M14,25.36H6c-0.199,0-0.36-0.161-0.36-0.36v-4
+	c0-0.199,0.161-0.36,0.36-0.36h8c0.199,0,0.36,0.161,0.36,0.36v4C14.36,25.199,14.199,25.36,14,25.36z M6.36,24.64h7.28v-3.28H6.36
+	V24.64z M26,16.359h-8c-0.199,0-0.36-0.161-0.36-0.36v-4c0-0.199,0.161-0.36,0.36-0.36h8c0.199,0,0.36,0.161,0.36,0.36v4
+	C26.36,16.198,26.199,16.359,26,16.359z M18.36,15.64h7.279v-3.28H18.36V15.64z M14,16.359H6c-0.199,0-0.36-0.161-0.36-0.36v-4
+	c0-0.199,0.161-0.36,0.36-0.36h8c0.199,0,0.36,0.161,0.36,0.36v4C14.36,16.198,14.199,16.359,14,16.359z M6.36,15.64h7.28v-3.28
+	H6.36V15.64z M23,7.36c-0.75,0-1.36-0.61-1.36-1.36V2c0-0.75,0.61-1.36,1.36-1.36S24.36,1.25,24.36,2v4
+	C24.36,6.75,23.75,7.36,23,7.36z M23,1.36c-0.353,0-0.64,0.287-0.64,0.64v4c0,0.353,0.287,0.64,0.64,0.64S23.64,6.353,23.64,6V2
+	C23.64,1.647,23.353,1.36,23,1.36z M9,7.36C8.25,7.36,7.64,6.75,7.64,6V2c0-0.75,0.61-1.36,1.36-1.36S10.36,1.25,10.36,2v4
+	C10.36,6.75,9.75,7.36,9,7.36z M9,1.36C8.647,1.36,8.36,1.647,8.36,2v4c0,0.353,0.287,0.64,0.64,0.64S9.64,6.353,9.64,6V2
+	C9.64,1.647,9.353,1.36,9,1.36z M20,4.36h-8V3.64h8V4.36z">
+            </path>
+
+          </svg>
+        </button>
+
+        <section class="dates-container">
+          <div class="popover-main-wrapper">
+            <section class="month-wrapper">
+              <button id="prev-month" class="btn btn-icon">
+                <svg class="svg-icon" viewBox="0 0 24 24" id="_24x24_On_Light_Arrow-Left"
+                  data-name="24x24/On Light/Arrow-Left" xmlns="http://www.w3.org/2000/svg" data-iconid="304501"
+                  data-svgname="Arrow left">
+                  <rect id="view-box"></rect>
+                  <path id="Shape"
+                    d="M.22,10.22A.75.75,0,0,0,1.28,11.28l5-5a.75.75,0,0,0,0-1.061l-5-5A.75.75,0,0,0,.22,1.28l4.47,4.47Z"
+                    transform="translate(14.75 17.75) rotate(180)"></path>
+                </svg>
+              </button>
+              <div class="month-name">
+                January
+              </div>
+              <button id="next-month" class="btn btn-icon svg-icon">
+                <svg class="svg-icon" viewBox="0 0 24 24" id="_24x24_On_Light_Arrow-Right"
+                  data-name="24x24/On Light/Arrow-Right" xmlns="http://www.w3.org/2000/svg" data-iconid="304515"
+                  data-svgname="Arrow right">
+                  <rect id="view-box"></rect>
+                  <path id="Shape"
+                    d="M.22,10.22A.75.75,0,0,0,1.28,11.28l5-5a.75.75,0,0,0,0-1.061l-5-5A.75.75,0,0,0,.22,1.28l4.47,4.47Z"
+                    transform="translate(9.25 6.25)"></path>
+                </svg>
+
+              </button>
+            </section>
+            <div class="daysoftheweek-container">
+              <div class="weekdays day-1">Sun</div>
+              <div class="weekdays day-2">Mon</div>
+              <div class="weekdays day-3">Tue</div>
+              <div class="weekdays day-4">Wed</div>
+              <div class="weekdays day-5">Thu</div>
+              <div class="weekdays day-6">Fri</div>
+              <div class="weekdays day-7">Sat</div>
+            </div>
+
+            <div class="date-cell-container">
+              <div class="date-cell item1"><button class="date-btn" id="btn1">1</button></div>
+              <div class="date-cell item2"><button class="date-btn" id="btn2">2</button></div>
+              <div class="date-cell item3"><button class="date-btn" id="btn3">3</button></div>
+              <div class="date-cell item4"><button class="date-btn" id="btn4">4</button></div>
+              <div class="date-cell item5"><button class="date-btn" id="btn5">5</button></div>
+              <div class="date-cell item6"><button class="date-btn" id="btn6">6</button></div>
+              <div class="date-cell item7"><button class="date-btn" id="btn7">7</button></div>
+              <div class="date-cell item8"><button class="date-btn" id="btn8">8</button></div>
+              <div class="date-cell item9"><button class="date-btn" id="btn9">9</button></div>
+              <div class="date-cell item10"><button class="date-btn" id="btn10">10</button></div>
+              <div class="date-cell item11"><button class="date-btn" id="btn11">11</button></div>
+              <div class="date-cell item12"><button class="date-btn" id="btn12">12</button></div>
+              <div class="date-cell item13"><button class="date-btn" id="btn13">13</button></div>
+              <div class="date-cell item14"><button class="date-btn" id="btn14">14</button></div>
+              <div class="date-cell item15"><button class="date-btn" id="btn15">15</button></div>
+              <div class="date-cell item16"><button class="date-btn" id="btn16">16</button></div>
+              <div class="date-cell item17"><button class="date-btn" id="btn17">17</button></div>
+              <div class="date-cell item18"><button class="date-btn" id="btn18">18</button></div>
+              <div class="date-cell item19"><button class="date-btn" id="btn19">19</button></div>
+              <div class="date-cell item20"><button class="date-btn" id="btn20">20</button></div>
+              <div class="date-cell item21"><button class="date-btn" id="btn21">21</button></div>
+              <div class="date-cell item22"><button class="date-btn" id="btn22">22</button></div>
+              <div class="date-cell item23"><button class="date-btn" id="btn23">23</button></div>
+              <div class="date-cell item24"><button class="date-btn" id="btn24">24</button></div>
+              <div class="date-cell item25"><button class="date-btn" id="btn25">25</button></div>
+              <div class="date-cell item26"><button class="date-btn" id="btn26">26</button></div>
+              <div class="date-cell item27"><button class="date-btn" id="btn27">27</button></div>
+              <div class="date-cell item28"><button class="date-btn" id="btn28">28</button></div>
+              <div class="date-cell item29"><button class="date-btn" id="btn29">29</button></div>
+              <div class="date-cell item30"><button class="date-btn" id="btn30">30</button></div>
+              <div class="date-cell item31"><button class="date-btn" id="btn31">31</button></div>
+              <div class="date-cell item32"><button class="date-btn" id="btn32"></button></div>
+              <div class="date-cell item33"><button class="date-btn" id="btn33"></button></div>
+              <div class="date-cell item34"><button class="date-btn" id="btn34"></button></div>
+              <div class="date-cell item35"><button class="date-btn" id="btn35"></button></div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+    </section>
+  </main>
+  <script src="./script.js"></script>
+</body>
+
+</html>

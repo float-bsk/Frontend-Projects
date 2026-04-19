@@ -16,8 +16,7 @@
     --space-1:0.5rem;
     --space-2:1rem;
     --space-3:2rem;
-    --space-4:3rem;
-
+    --space-4:3rem;   
     
 }
 
@@ -29,7 +28,7 @@
 
 [data-theme="dark"]{
     --background-color: var(--color-black);
-    --background-color-secondary: var(var(--color-black));
+    --background-color-secondary: var(--color-gray);
     --text-color:var(--color-white);
     --text-accent-color:var(--color-lightgray);
     --border-color:var(--color-gray);
@@ -41,7 +40,7 @@
 
 [data-theme="light"]{
     --background-color: var(--color-white);
-    --background-color-secondary: var(var(--color-eggshell-white));
+    --background-color-secondary: var(--color-eggshell-white);
     --text-color:var(--color-black);
     --text-accent-color:var(--color-gray);
     --border-color:var(--color-black);
@@ -104,9 +103,6 @@ main{
     border-radius:50%;
     object-fit: cover;
 }
-
-
-
 
 /* TESTIMONIAL MAIN CARD 
     VARIANT 1
